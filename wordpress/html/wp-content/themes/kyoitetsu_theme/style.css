@@ -1,0 +1,77 @@
+/*
+Theme Name: kyoitetsu_theme
+*/
+/* この下に通常のcssを書いていく */
+.article__item{
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.article__pic{
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.article__foot{
+  overflow: hidden;
+}
+.article__foot .prev{
+  position: relative;
+  float: left;
+}
+.article__foot .next{
+  position: relative;
+  float: right;
+}
+.article__head .ttl{
+  font-size: 30px;
+  font-weight: bold;
+}
+.article__body{
+  margin-bottom: 50px;
+}
+
+.pagination {
+  clear: both;
+  padding: 20px 0;
+  position: relative;
+  font-size: 14px;
+  line-height: 14px;
+        text-align: center;
+}
+.pagination-box {
+  display: inline-block;
+}
+.pagination span, .pagination a {
+  display: block;
+  float: left;
+  margin: 2px 2px 2px 0;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+  width: auto;
+  color: #fff; /* 通常の文字色 */
+  background: #47BEA0; /* 通常の背景色 */
+}
+.pagination a:hover{
+  color: #47BEA0; /* マウスホバー時の文字色 */
+  background: #F9D635; /* マウスホバー時の背景色 */
+}
+.pagination .current{
+  padding: 10px 15px 10px 15px;
+  color: #47BEA0; /* 現在のページの文字色 */
+        background: #F9D635; /* 現在のページの背景色 */
+}
+@media only screen and (max-width: 413px) {
+.pagination {
+  font-size: 12px;
+  line-height: 12px;
+}
+.pagination span, .pagination a {
+  padding: 8px 10px 8px 10px;
+}
+.pagination .current{
+  padding: 8px 10px 8px 10px;
+}
+}

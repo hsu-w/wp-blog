@@ -1,4 +1,15 @@
 <?php
+/*ディレクトリー*/
+
+function current_directory() {
+
+    if ( $_SERVER['REMOTE_ADDR'] == '172.23.0.1' ) {
+        echo "";
+    } else {
+        echo "/blog";
+    }
+
+}
 /* 投稿アーカイブページの作成 */
 function post_has_archive( $args, $post_type ) {
 

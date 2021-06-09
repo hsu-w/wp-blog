@@ -3,7 +3,7 @@
       </footer>
       <?php wp_footer(); ?>
     </div>
-    <script data-test-src src="/wp-content/themes/kyoitetsu_theme/_assets/js/vendor-03826a0ba54327becd5c.js"></script>
-    <script data-test-src src="/wp-content/themes/kyoitetsu_theme/_assets/js/app-4c73c4e4a164e78acaa0.js"></script>
+    <script src="<?php current_directory(); ?>/wp-content/themes/kyoitetsu_theme/_assets/js/vendor-03826a0ba54327becd5c.js"></script>
+    <script src="<?php current_directory(); ?>/wp-content/themes/kyoitetsu_theme/_assets/js/app-4c73c4e4a164e78acaa0.js"></script>
   </body>
 </html>

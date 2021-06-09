@@ -34,7 +34,7 @@
           endforeach; // ループの終了
         ?>
       </ul>
-      <div class="green-btn"><a href="./news/">お知らせ一覧を見る</a></div>
+      <div class="green-btn"><a href="<?php current_directory(); ?>/news/">お知らせ一覧を見る</a></div>
     </section>
 
     <?php else: ?>

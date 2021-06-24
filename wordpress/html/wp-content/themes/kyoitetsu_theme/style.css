@@ -75,3 +75,23 @@ Theme Name: kyoitetsu_theme
   padding: 8px 10px 8px 10px;
 }
 }
+
+
+.new-news.hide-new-label::after{
+  display: none;
+}
+.new-news.show-new-label::after{
+  content: "NEW";
+  position: absolute;
+  top: 50%;
+  left: 144px;
+  display: block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fff;
+  background: #259256;
+}

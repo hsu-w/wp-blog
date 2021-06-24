@@ -23,6 +23,10 @@
             </header>
             <div class="article__body">
                 <?php the_content(); ?>
+                <?php echo get_post_meta(get_the_ID(), 'custom_fields', true); ?>
+                <?php if(get_post_meta(get_the_ID(), 'custom_checkbox', true) == 'is-on') : ?>
+                <p>is-onnnnnn</p>
+                <?php endif; ?>
             </div>
             <!--//ループ-->
             <?php endwhile; ?>

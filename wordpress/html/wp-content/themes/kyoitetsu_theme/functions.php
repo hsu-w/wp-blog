@@ -30,6 +30,52 @@ function post_has_archive($args, $post_type)
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
 wp_enqueue_style('style', get_stylesheet_uri());
 
+function news_carousel() {
+    $news_args = array(
+        'numberposts' => 1000000,
+        'category' => get_cat_ID('news')
+    );
+    $news_posts = get_posts($news_args);
+    $new_label_array = [];
+    foreach($news_posts as $post) { // ループの開始
+        setup_postdata($post); // 記事データの取得
+        if (get_post_meta(get_the_ID(), 'custom_new_label_checkbox', true) == 'is-on') {
+            array_push($new_label_array, get_the_ID());
+        }
+    }
+    wp_reset_postdata();
+    $args = array(
+        'posts_per_page' => 4 // 表示件数
+    );
+    $posts = get_posts($args);
+    $new_each_count = 0;
+    $temp_content = '';
+    echo '<ul class="news_carousel news-list">';
+    foreach($posts as $post) { // ループの開始
+        setup_postdata($post); // 記事データの取得
+        $key = array_search(get_the_ID(), $GLOBALS['new_label_array']);
+        if ($key <= 2 && get_post_meta(get_the_ID(), 'custom_new_label_checkbox', true) == 'is-on') {
+            $temp_label = ' show-new-label';
+        } else {
+            $temp_label = ' hide-new-label';
+        }
+        echo '<li class="news-list__item new-news '.$temp_label.
+        '">'.
+        '<dl class="news-detail">'.
+        '<dt class="news-detail__day">';
+        the_time('Y-m-d');
+        echo '</dt>'.
+        '<dd class="news-detail__txt"><a class="news-detail__txt--link" href="';
+        the_permalink();
+        the_permalink();
+        echo '">';
+        the_title();
+        echo '</a></dd>'.
+        '</dl>'.
+        '</li>';
+    }
+    echo '</ul>';
+}
 //Pagination
 function pagination($pages = '', $range = 1)
 {
@@ -115,3 +161,15 @@ function save_custom_fields($post_id)
 }
 add_action('save_post', 'save_custom_fields');
 
+
+
+add_action( 'wp_enqueue_scripts', 'add_my_script' );
+function add_my_script() {
+    wp_register_script(
+        'parent-theme-script', 
+        get_template_directory_uri() . '/js/jquery-3.6.0.min.js', 
+        array('jquery') 
+    );
+
+    wp_enqueue_script('parent-theme-script');
+}

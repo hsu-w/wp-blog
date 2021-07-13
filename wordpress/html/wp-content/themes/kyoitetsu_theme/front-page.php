@@ -66,6 +66,9 @@
       <p>未分類投稿が見つからない</p>
       <!--//投稿が見つからない-->
     <?php endif; ?>
+    <?php news_carousel(); ?>
+
+    
   </div>
 
 <?php get_footer(); ?>

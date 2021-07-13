@@ -95,3 +95,20 @@ Theme Name: kyoitetsu_theme
   color: #fff;
   background: #259256;
 }
+
+.news_carousel{
+  position: relative;
+  margin: 0 auto!important;
+  background-color: #eee;
+  width: 100%;
+  max-width: 500px;
+  height: 72px;
+}
+
+@media only screen and (max-width: 413px) {
+
+  .news_carousel{
+    width: 100%;
+  
+  }
+}

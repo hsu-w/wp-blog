@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php current_directory(); ?>/wp-content/themes/kyoitetsu_theme/_assets/css/style-60bcf5ddb0e12613b108.css">
+    <link rel="stylesheet" href="<?php current_directory(); ?>/wp-content/themes/kyoitetsu_theme/slick/slick.css">
+    <link rel="stylesheet" href="<?php current_directory(); ?>/wp-content/themes/kyoitetsu_theme/slick/slick-theme.css">
   </head>
   <body>
     <div class="wrapper">

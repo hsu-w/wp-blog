@@ -1,16 +1,6 @@
-<?php get_header(); ?>
-<div class="mv">
-  <div class="container">
-    <p class="catch-copy"><span class="catch-copy__line">フェアコンサルティンググループ</span><span class="catch-copy__line">グローバル投資プラットフォーム</span></p>
-    <p class="mv-txt">直営のグローバル拠点に多数の日本人専門家を擁するフェアコンサルティンググループから<br>各国・各拠点におけるグローバル投資情報を提供いたします</p>
-  </div>
-</div>
-  <div class="container">
-  <?php if ( have_posts() ): ?>
 
-    <section class="sec-news" id="news">
-      <h2 class="sec-ttl">お知らせ<span class="sec-ttl__en">NEWS</span></h2>
-      <ul class="news-list">
+  <?php if ( have_posts() ): ?>
+      <ul class="news_carousel news-list">
 
         <?php
           $news_args = array(
@@ -58,16 +48,9 @@
           endforeach; // ループの終了
         ?>
       </ul>
-      <div class="green-btn"><a href="<?php current_directory(); ?>/news/">お知らせ一覧を見る</a></div>
-    </section>
 
     <?php else: ?>
-      <!--投稿が見つからない-->
-      <p>未分類投稿が見つからない</p>
-      <!--//投稿が見つからない-->
     <?php endif; ?>
 
-    <?php get_template_part('news_carousel'); ?>
+    
   </div>
-
-<?php get_footer(); ?>

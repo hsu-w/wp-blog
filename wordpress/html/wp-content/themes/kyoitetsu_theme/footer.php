@@ -3,9 +3,12 @@
       </footer>
       <?php wp_footer(); ?>
     </div>
-    <script src="<?php current_directory(); ?>/wp-content/themes/kyoitetsu_theme/_assets/js/vendor-03826a0ba54327becd5c.js"></script>
-    <script src="<?php current_directory(); ?>/wp-content/themes/kyoitetsu_theme/_assets/js/app-4c73c4e4a164e78acaa0.js"></script>
-    <script src="<?php current_directory(); ?>/wp-content/themes/kyoitetsu_theme/slick/slick.min.js"></script>
+    <?php 
+      $url = home_url();
+    ?>
+    <script src="<?php echo esc_url( $url ); ?>/wp-content/themes/kyoitetsu_theme/_assets/js/vendor-03826a0ba54327becd5c.js"></script>
+    <script src="<?php echo esc_url( $url ); ?>/wp-content/themes/kyoitetsu_theme/_assets/js/app-4c73c4e4a164e78acaa0.js"></script>
+    <script src="<?php echo esc_url( $url ); ?>/wp-content/themes/kyoitetsu_theme/slick/slick.min.js"></script>
     <script>
       jQuery('.news_carousel').slick({
         autoplay: true
